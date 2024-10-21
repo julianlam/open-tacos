@@ -23,14 +23,14 @@ export const DialogContent = React.forwardRef<any, Props>(
           className={clx(fullScreen ? 'dialog-wide' : 'dialog-default')} {...props} ref={forwardedRef}
         >
           <div className='flex items-center px-2'>
+            <DialogPrimitive.Title className='dialog-title'>
+              {title}
+            </DialogPrimitive.Title>
             <DialogPrimitive.Close aria-label='Close' asChild className='dialog-close-button'>
               <button className='btn btn-circle btn-ghost outline-none'>
                 <XMarkIcon size={24} />
               </button>
             </DialogPrimitive.Close>
-            <DialogPrimitive.Title className='dialog-title'>
-              {title}
-            </DialogPrimitive.Title>
           </div>
           {children}
         </DialogPrimitive.Content>
